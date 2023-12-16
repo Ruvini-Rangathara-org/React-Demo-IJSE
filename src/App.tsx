@@ -1,8 +1,9 @@
 import React from 'react';
-import Header from "./components/layout/header";
-import Footer from "./components/layout/footer";
+// import Header from "./components/layout/header";
+// import Footer from "./components/layout/footer";
 // import Home from "./views/home";
-import Card from "./components/card/card";
+import Login from "./views/login";
+// import Card from "./components/card/card";
 
 interface Props {
     title: string
@@ -35,23 +36,26 @@ class App extends React.Component<Props, State> {
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | Iterable<React.ReactNode> | React.ReactPortal | boolean | any | null | undefined {
         return (<div>
 
-                <Header/>
-                {/*<Home/>*/}
+            {/*<Header/>*/}
 
-                <div className={'text-center m-5'}>
-                    <div className={'text-2xl font-bold'}>{this.state.count}</div>
-                    <br/>
-                    <button className={'bg-green-600 text-white p-5'} onClick={this.up}>Click</button>
-                </div>life cycle of react component
+            <Login/>
 
-            {
-                this.state.count > 2 ? null : <Card title={this.props.title} content={this.props.content}/>
-            }
+            {/*<Home/>*/}
+
+            {/*    <div className={'text-center m-5'}>*/}
+            {/*        <div className={'text-2xl font-bold'}>{this.state.count}</div>*/}
+            {/*        <br/>*/}
+            {/*        <button className={'bg-green-600 text-white p-5'} onClick={this.up}>Click</button>*/}
+            {/*    </div>life cycle of react component*/}
+
+            {/*{*/}
+            {/*    this.state.count > 2 ? null : <Card title={this.props.title} content={this.props.content}/>*/}
+            {/*}*/}
 
 
-                <Footer/>
+            {/*<Footer/>*/}
 
-            </div>);
+        </div>);
     }
 
 }
