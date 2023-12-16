@@ -11,7 +11,7 @@ class Home extends React.Component {
 
                 {
                     data.map((r, index) => {
-                        return <Card title={index + r.title} content={r.content}/>
+                        return <Card title={++index+" " + r.title} content={r.content}/>
                     })
                 }
 

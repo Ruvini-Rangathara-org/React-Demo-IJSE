@@ -1,9 +1,13 @@
 import React from 'react';
-// import Header from "./components/layout/header";
-// import Footer from "./components/layout/footer";
-// import Home from "./views/home";
+import Header from "./components/layout/header";
+import Footer from "./components/layout/footer";
+import Home from "./views/home";
 import Login from "./views/login";
-// import Card from "./components/card/card";
+import SignUp from "./views/signup";
+import New from "./views/new-article";
+import MyArticles from "./views/my-articles";
+
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 interface Props {
     title: string
@@ -36,9 +40,25 @@ class App extends React.Component<Props, State> {
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | Iterable<React.ReactNode> | React.ReactPortal | boolean | any | null | undefined {
         return (<div>
 
-            {/*<Header/>*/}
+            <BrowserRouter>
+                <Header/>
+                <Routes>
+                    <Route path={"/"} element={<Home/>}/>
+                    <Route path={"/home"} element={<Home/>}/>
+                    <Route path={"/login"} element={<Login/>}/>
+                    <Route path={"/signup"} element={<SignUp/>}/>
+                    <Route path={"/signup"} element={<SignUp/>}/>
+                    <Route path={"/new-article"} element={<New/>}/>
+                    <Route path={"/my-articles"} element={<MyArticles/>}/>
+                </Routes>
+                <Footer/>
+            </BrowserRouter>
 
-            <Login/>
+
+
+            {/*<Login/>*/}
+
+            {/*<SignUp/>*/}
 
             {/*<Home/>*/}
 
@@ -53,7 +73,7 @@ class App extends React.Component<Props, State> {
             {/*}*/}
 
 
-            {/*<Footer/>*/}
+
 
         </div>);
     }

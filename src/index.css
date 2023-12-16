@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .main_btn {
+    @apply bg-green-500 text-white font-bold py-2 px-4 rounded;
+  }
+}
+
+.ql-container{
+    height: 250px;
+}
