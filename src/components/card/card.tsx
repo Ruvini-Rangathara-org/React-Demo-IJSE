@@ -13,10 +13,10 @@ interface State {
 class Card extends React.Component<Props, any> {
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | Iterable<React.ReactNode> | React.ReactPortal | boolean | any | null | undefined {
         return (
-            <div className={'w-72 p-5 border-solid border-2 m-5'}>
-                <h1 className={'text-2xl font-bold'}>{this.props.title}</h1>
-                <p className={'my-5'}>{this.props.content}</p>
-                <button className={'bg-green-600 p-2 text-white'}>Read More...</button>
+            <div className={'w-72 p-5 border-solid border-2 m-5 flex-col '}>
+                <h1 className={'text-lg'}>{this.props.title}</h1>
+                <p className={'my-5 text-xs'}>{this.props.content}</p>
+                <button className={'bg-white text-green-600 hover:bg-green-600 p-1 hover:text-white border border-green-600 '}>Read More...</button>
             </div>
         );
     }
